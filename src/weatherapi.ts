@@ -19,17 +19,24 @@ getTemp()
     const temp_str : string = temp_celcius.toFixed(0);
     let html = document.getElementById('temp');
     let clothes = document.getElementById('clothes');
+    let icon = document.getElementById('icon');
     html.innerHTML = "Het is nu: " + "" + temp_str + "°C" + " buiten";
+
+
     if (temp_celcius < 10) {
-        clothes.innerHTML = "Je hebt een jas nodig";
+        clothes.innerHTML = "Je kan het beste een jas en warme kledigen dragen.";
+        icon.innerHTML = '<img src="https://img.icons8.com/jacket"/>';
     } else if (temp_celcius < 20) {
-        clothes.innerHTML = "Je hebt een vest nodig";
+        clothes.innerHTML = "Je kan het beste een vest en wat dikkere kleren dragen.";
+        icon.innerHTML = '<img src="https://img.icons8.com/vest"/>';
     }
     else if (temp_celcius < 30) {
-        clothes.innerHTML = "Je hebt een t-shirt nodig";
+        clothes.innerHTML = "Je kan het beste een t-shirt en korte broek dragen en laat de winterjas maar lekker thuis.";
+        icon.innerHTML = '<img src="https://img.icons8.com/t-shirt"/>';
     }
     else if (temp_celcius < 40) {
-        clothes.innerHTML = "Je hebt een zwembroek nodig";
+        clothes.innerHTML = "Je kan het beste een zwembroek aantrekken want face it het is veelste warm";
+        icon.innerHTML = '<img src="https://img.icons8.com/swimwear"/>';
     }
     else {
         clothes.innerHTML = "Ga weg het is veelste koud of veelste warm";
