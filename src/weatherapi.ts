@@ -32,7 +32,7 @@ getTemp()
         clothes.innerHTML = "Je hebt een zwembroek nodig";
     }
     else {
-        clothes.innerHTML = "Ga weg";
+        clothes.innerHTML = "Ga weg het is veelste koud of veelste warm";
     }
 
 })
