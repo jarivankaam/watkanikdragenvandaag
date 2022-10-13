@@ -61,6 +61,19 @@ body {
           flex-direction: column-reverse;
 }
 
+.section-temp {
+  height: 100%;
+  margin-top: 5rem;
+}
 .section-temp .temp {
   color: hsl(0deg, 0%, 100%);
+}
+
+.icon img {
+  background-color: white;
+  border-radius: 100%;
+  padding: 1rem;
+  width: 100px;
+  height: 100px;
+  image-rendering: auto;
 }
