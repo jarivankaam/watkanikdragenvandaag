@@ -26,9 +26,14 @@ getTemp()
     if (temp_celcius < 10) {
         clothes.innerHTML = "Je kan het beste een jas en warme kledigen dragen.";
         icon.innerHTML = '<img src="https://img.icons8.com/jacket"/>';
-    } else if (temp_celcius < 20) {
+    } else if (temp_celcius < 15 && temp_celcius > 10) {
         clothes.innerHTML = "Je kan het beste een vest en wat dikkere kleren dragen.";
         icon.innerHTML = '<img src="https://img.icons8.com/vest"/>';
+    }
+    else if (temp_celcius < 20 && temp_celcius > 15) {
+        clothes.innerHTML = "Je kant het beste lichte en dunnne kleding dragen maar je mag ook dikkere kleding dragen.";
+        icon.innerHTML = '<img src="https://img.icons8.com/t-shirt"/>';
+
     }
     else if (temp_celcius < 30) {
         clothes.innerHTML = "Je kan het beste een t-shirt en korte broek dragen en laat de winterjas maar lekker thuis.";
