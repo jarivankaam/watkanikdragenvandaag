@@ -15,29 +15,29 @@ navigator.geolocation.getCurrentPosition((position) => {
         .then(temps => {
         const temp_celcius = temps - 273.15;
         const temp_str = temp_celcius.toFixed(0);
-        let html = document.getElementById('temp');
-        let clothes = document.getElementById('clothes');
-        let icon = document.getElementById('icon');
+        let html = document.querySelector('#temp');
+        let clothes = document.querySelector('#clothes');
+        let icon = document.querySelector('#icon');
         html.innerHTML = "Het is nu: " + "" + temp_str + "°C" + " buiten";
         if (temp_celcius < 10) {
             clothes.innerHTML = "Je kan het beste een jas en warme kledigen dragen.";
-            icon.innerHTML = '<img src="https://img.icons8.com/jacket"/>';
+            icon.innerHTML = '<img src="https://img.icons8.com/jacket" alt="icon freezing "/>';
         }
         else if (temp_celcius < 15 && temp_celcius > 10) {
             clothes.innerHTML = "Je kan het beste een vest en wat dikkere kleren dragen.";
-            icon.innerHTML = '<img src="https://img.icons8.com/vest"/>';
+            icon.innerHTML = '<img src="https://img.icons8.com/vest" alt="icon realy cold "/> ';
         }
         else if (temp_celcius < 20 && temp_celcius > 15) {
             clothes.innerHTML = "Je kant het beste lichte en dunnne kleding dragen maar je mag ook dikkere kleding dragen.";
-            icon.innerHTML = '<img src="https://img.icons8.com/t-shirt"/>';
+            icon.innerHTML = '<img src="https://img.icons8.com/t-shirt" alt="icon cold"/>';
         }
         else if (temp_celcius < 30) {
             clothes.innerHTML = "Je kan het beste een t-shirt en korte broek dragen en laat de winterjas maar lekker thuis.";
-            icon.innerHTML = '<img src="https://img.icons8.com/t-shirt"/>';
+            icon.innerHTML = '<img src="https://img.icons8.com/t-shirt" alt="icon hot "/>';
         }
         else if (temp_celcius < 40) {
             clothes.innerHTML = "Je kan het beste een zwembroek aantrekken want face it het is veelste warm";
-            icon.innerHTML = '<img src="https://img.icons8.com/swimwear"/>';
+            icon.innerHTML = '<img src="https://img.icons8.com/swimwear" alt="icon realy hot"/>';
         }
         else {
             clothes.innerHTML = "Ga weg het is veelste koud of veelste warm";
