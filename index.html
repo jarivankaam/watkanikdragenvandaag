@@ -9,27 +9,42 @@
     <meta name="author" content="Jari van Kaam">
     <meta property="og:image"  content="favicon.ico">
     <link rel="icon" href="favicon.ico"></link>
-    <link rel="stylesheet" href="public/css/style.min.css">
+
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/css/bootstrap.min.css" integrity="sha512-Ud5J5z5+MpF5L5z5yXejldfAp33Jc5j+1lQelJgopZakz+ZL8kpH+pjOU0Ibm9SRnz+OxOJtG08CHtK+5Z5r5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="public/css/style.css">
     <script src="distro/weatherapi.js"></script>
     <title>Wat kan ik dragen vandaag?</title>
 </head>
 <body>
     <header class="section-header">
-        <div class="header flex justify-content-center">
-            <h2 id="Title">Wat kan ik dragen vandaag?</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 id="Title" class="text-center">Wat kan ik dragen vandaag?</h2>
+                </div>
+            </div>
         </div>
     </header>
     <main>
         <div class="section-temp">
-            <div class="temp flex justify-content-center align-items-center flex-column">
-                <div class="icon" id="icon">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <div class="icon" id="icon"></div>
+                                <h2 id="temp" class="temp-string"></h2>
+                                <p id="clothes"></p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <h2 id="temp" class="temp-string"></h2>
-                <p id="clothes"></p>
             </div>
         </div>
     </main>
-   
-    
-</body>
-</html>
+
+    <!-- Bootstrap JS dependencies (jQuery and Popper.js) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-f6Mn9mPRQsWjN+6D33Jg4ZOt7s/8Wg1S+kjYDMX9T9TtkyXTbJZt7pIvnUM2wJBDle/o3Bv3q3SY21tN9+sfOQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js" integrity="sha512-61P3mdZQrFqczc9f1/w/X+J5x5rd5qx5LLbSXmQ38mHe45fDD85ZzI5P9yyYfcz16C
