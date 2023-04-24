@@ -51,6 +51,9 @@ body {
   color: hsl(0, 0%, 100%);
 }
 
+.icon {
+  margin-bottom: 1em;
+}
 .icon img {
   background-color: white;
   border-radius: 100%;
