@@ -1,0 +1,23 @@
+{
+  "name": "watkanikdragenvandaag",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch:scss": "sass --watch ./scss/style.scss ./public/css/style.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jarivankaam/watkanikdragenvandaag.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jarivankaam/watkanikdragenvandaag/issues"
+  },
+  "homepage": "https://github.com/jarivankaam/watkanikdragenvandaag#readme",
+  "dependencies": {
+    "sass": "^1.62.0"
+  }
+}
