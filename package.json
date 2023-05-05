@@ -1,37 +1,23 @@
 {
-  "name": "framework-boilerplate",
+  "name": "watkanikdragenvandaag",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch:scss": "sass --watch private/scss/style.scss  ./public/css/main.css",
-    "watch:ts": "tsc -w",
-    "test": "snyk test",
-    "monitor": "snyk monitor",
-    "pack": "webpack"
+    "watch:scss": "sass --watch ./scss/style.scss ./public/css/style.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jarivankaam/framework-boilerplate.git"
+    "url": "git+https://github.com/jarivankaam/watkanikdragenvandaag.git"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jarivankaam/framework-boilerplate/issues"
+    "url": "https://github.com/jarivankaam/watkanikdragenvandaag/issues"
   },
-  "homepage": "https://github.com/jarivankaam/framework-boilerplate#readme",
-  "devDependencies": {
-    "@types/node": "^18.11.18",
-    "css-loader": "^6.7.3",
-    "cssnano": "^5.1.14",
-    "node-sass": "^8.0.0",
-    "postcss-loader": "^7.0.2",
-    "sass": "^1.57.1",
-    "sass-loader": "^13.2.0",
-    "snyk": "^1.1085.0",
-    "style-loader": "^3.3.1",
-    "typescript": "^4.9.4",
-    "webpack-cli": "^5.0.1"
+  "homepage": "https://github.com/jarivankaam/watkanikdragenvandaag#readme",
+  "dependencies": {
+    "sass": "^1.62.0"
   }
 }

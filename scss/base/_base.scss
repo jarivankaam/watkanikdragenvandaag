@@ -1,3 +1,10 @@
+*{
+    font-family: 'Karla', sans-serif;;
+}
+body{
+    background-color: rgb(53, 52, 52);
+}
+
 .flex{
     display: flex;
     &.justify-content-center{
@@ -24,4 +31,5 @@
     &.flex-column-reverse{
         flex-direction: column-reverse;
     }
+
 }

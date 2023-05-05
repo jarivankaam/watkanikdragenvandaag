@@ -1,19 +1,19 @@
-navigator.geolocation.getCurrentPosition(function (position) {
-    var _a = position.coords, latitude = _a.latitude, longitude = _a.longitude;
-    console.log("latitude: ".concat(latitude, ", longitude: ").concat(longitude));
-    var api_url = "https://api.openweathermap.org/data/2.5/weather?lat=".concat(latitude, "&lon=").concat(longitude, "&appid=becb7265debe1d9f5176ce6e543deca5");
+navigator.geolocation.getCurrentPosition((position) => {
+    const { latitude, longitude } = position.coords;
+    console.log(`latitude: ${latitude}, longitude: ${longitude}`);
+    const api_url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=becb7265debe1d9f5176ce6e543deca5`;
     function getTemp() {
         return fetch(api_url)
-            .then(function (res) { return res.json(); })
-            .then(function (res) { return res.main.temp; });
+            .then(res => res.json())
+            .then(res => res.main.temp);
     }
-    getTemp().then(function (temp) {
-        var temp_celcius = temp - 273.15;
-        var temp_str = temp_celcius.toFixed(0);
-        var html = document.querySelector('#temp');
-        html.innerHTML = "Het is nu: ".concat(temp_str, "\u00B0C buiten");
-        var clothes = document.querySelector('#clothes');
-        var icon = document.querySelector('#icon');
+    getTemp().then(temp => {
+        const temp_celcius = temp - 273.15;
+        const temp_str = temp_celcius.toFixed(0);
+        const html = document.querySelector('#temp');
+        html.innerHTML = `Het is nu: ${temp_str}°C buiten`;
+        const clothes = document.querySelector('#clothes');
+        const icon = document.querySelector('#icon');
         if (temp_celcius < 10) {
             clothes.innerHTML = "Je kan het beste een jas en warme kleding dragen.";
             icon.innerHTML = '<img src="https://img.icons8.com/jacket" alt="icon freezing "/>';
@@ -38,13 +38,13 @@ navigator.geolocation.getCurrentPosition(function (position) {
             clothes.innerHTML = "Ga weg het is veel te koud of veel te warm";
         }
     })
-        .catch(function (error) {
+        .catch(error => {
         console.error("Error fetching weather data: ", error);
-        var html = document.querySelector('#temp');
+        const html = document.querySelector('#temp');
         html.innerHTML = "Kon het weer niet ophalen, probeer het later opnieuw";
     });
-}, function (error) {
+}, (error) => {
     console.error("Error getting location data: ", error);
-    var html = document.querySelector('#temp');
+    const html = document.querySelector('#temp');
     html.innerHTML = "Kon uw locatie niet vinden, controleer of locatietoegang is ingeschakeld";
 });
