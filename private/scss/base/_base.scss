@@ -1,0 +1,15 @@
+@import './vars/vars';
+@import './vars/imports';
+@import './grid_system/grid_system';
+
+
+@import './flex/flex_classes';
+@import './text/text_classes';
+@import './utilities/utilities';
+
+*{
+    font-family: 'Karla', sans-serif;;
+}
+body{
+    background-color: rgb(53, 52, 52);
+}

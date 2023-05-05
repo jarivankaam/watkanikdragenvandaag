@@ -1,0 +1,9 @@
+@import './base/base';
+@import './lib/swiper';
+@import './template-parts/header/header';
+@import './template-parts/icon/icon';
+@import './template-parts/temp/temp';
+
+.card-body {
+    padding: 6rem 0;
+}
